@@ -12,7 +12,7 @@ There appears to be an issue with iOS 11, home screen web apps (web clips), and 
 
 4. Launch the app and try logging in
 
-5. Close the app and re-open it. At this point you may find that you are no longer logged in, or you may find that your are still logged in. The issue is intermittent.
+5. Close the app and re-open it. At this point you may find that you are no longer logged in, or you may find that you are still logged in. The issue is intermittent.
 
 6. If you are still logged in, try logging out.
 
