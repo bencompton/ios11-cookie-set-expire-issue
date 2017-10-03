@@ -6,35 +6,25 @@ using System.Web.Security;
 namespace LoginTest.Controllers
 {
     public class HomeController : Controller
-    {
-        [Authorize]
+    {        
         [Route("~/")]
         public ActionResult Index()
         {
-            return View();
+            var loginCookie = Request.Cookies["Login"];
+
+            if (loginCookie != null)
+            {
+                return View();
+            }
+            else
+            {
+                return Redirect("Login");
+            }
         }
 
         [Route("~/login/")]
         public ActionResult Login()
         {
-            var authTicket = new FormsAuthenticationTicket(
-                1,
-                "Login",
-                DateTime.Now.ToUniversalTime(),
-                DateTime.Now.ToUniversalTime().AddMinutes(20),
-                true,
-                ""
-            );
-
-            var encryptedTicket = FormsAuthentication.Encrypt(authTicket);
-
-            var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket)
-            {
-                Expires = DateTime.Now.AddMinutes(20)
-            };
-
-            Response.Cookies.Add(authCookie);
-
             return View();
         }
 
@@ -42,13 +32,25 @@ namespace LoginTest.Controllers
         [Route("~/login/")]
         public ActionResult LoginComplete()
         {
+            var authCookie = new HttpCookie("Login", "login token")
+            {
+                Expires = DateTime.Now.AddMinutes(20)
+            };
+
+            Response.Cookies.Add(authCookie);
+
             return Redirect("~/");
         }
 
         [Route("~/logout/")]
         public ActionResult Logout()
         {
-            FormsAuthentication.SignOut();
+            var authCookie = new HttpCookie("Login", "login token")
+            {
+                Expires = DateTime.Now.AddMinutes(-1000)              
+            };
+
+            Response.Cookies.Add(authCookie);
 
             return View();
         }

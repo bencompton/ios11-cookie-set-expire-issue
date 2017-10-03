@@ -19,5 +19,9 @@
     <div>
         <button onclick="javascript:window.location.href='@Url.Action("Logout")'">Log out</button>
     </div>
+    <div id="cookie-placeholder"></div>
+    <script type="text/javascript">
+        document.getElementById('cookie-placeholder').innerHTML = 'Cookies: ' + document.cookie;
+    </script>
 </body>
 </html>
