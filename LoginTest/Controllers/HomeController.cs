@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -18,7 +18,7 @@ namespace LoginTest.Controllers
             }
             else
             {
-                return Redirect("Login");
+                return View("Login");
             }
         }
 
