@@ -1,4 +1,4 @@
-﻿
+
 @{
     Layout = null;
 }
@@ -14,7 +14,7 @@
 </head>
 <body>
     <div> 
-        @using (Html.BeginForm("Confirm", "Login", FormMethod.Post, new { id = "confirm-form" }))
+        @using (Html.BeginForm("LoginComplete", "Home", FormMethod.Post, new { id = "confirm-form" }))
         {
             <input type="submit" value="Log in" />
         }        
