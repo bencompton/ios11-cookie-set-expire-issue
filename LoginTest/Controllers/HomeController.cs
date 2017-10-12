@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -18,14 +18,8 @@ namespace LoginTest.Controllers
             }
             else
             {
-                return Redirect("Login");
+                return View("Login");
             }
-        }
-
-        [Route("~/login/")]
-        public ActionResult Login()
-        {
-            return View();
         }
 
         [HttpPost]
@@ -45,7 +39,7 @@ namespace LoginTest.Controllers
         [Route("~/logout/")]
         public ActionResult Logout()
         {
-            var authCookie = new HttpCookie("Login", "login token")
+            var authCookie = new HttpCookie("Login", "")
             {
                 Expires = DateTime.Now.AddMinutes(-1000)              
             };
