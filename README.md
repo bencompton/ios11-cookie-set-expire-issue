@@ -1,10 +1,14 @@
-# ios11-webclip-auth-cookie-issue
+# iOS 11 Cookie Set / Expire Issue
 
-There appears to be an issue with iOS 11, home screen web apps (web clips), and cookies (as of iOS 11.0.1). When a cookie is set, iOS 11 seems to intermittently delete the cookie. Other times, when the a cookie is expired, iOS 11 appears to intermittently fail to delete the cookie. These two behaviors occur after closing and re-opening the home screen web app and don't seem to be reproducible in Safari. These behaviors also don't appear to be present in iOS 10 or iOS 9.
+There appears to be an intermittent issue with setting and expiring cookies in iOS 11 home screen web apps. Two erroneous behaviors can be observed:
+
+* When a cookie is set and then the app is closed and re-opened, the cookie may no longer be present upon re-opening the app
+
+* When a cookie is expired and then the app is closed and re-opened, the cookie may still be present upon re-opening the app
 
 #### Steps to reproduce:
 
-1. Launch https://github.com/bencompton/ios11-webclip-auth-cookie-issue/blob/master/index.html in Mobile Safari and add to home screen
+1. Launch https://bencompton.github.io/ios11-webclip-auth-cookie-issue/index.html in Mobile Safari and add to home screen
 
 2. Click the "log in" button
 
