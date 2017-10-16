@@ -4,7 +4,7 @@ There appears to be an issue with iOS 11, home screen web apps (web clips), and 
 
 #### Steps to reproduce:
 
-1. Launch https://raw.githubusercontent.com/bencompton/ios11-webclip-auth-cookie-issue/master/index.html in Mobile Safari and add to home screen
+1. Launch https://bencompton.github.io/ios11-webclip-auth-cookie-issue/index.html in Mobile Safari and add to home screen
 
 2. Click the "log in" button
 
