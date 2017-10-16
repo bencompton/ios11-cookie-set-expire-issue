@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Index</title>
+    <script type="text/javascript">		
+		if (document.cookie.indexOf('logged-in') === -1) {
+			window.location.href = 'login.html';
+		}
+		
+		function logOut() {
+			window.location.href = 'logout.html';
+		}
+    </script>
+</head>
+<body>
+    <div> 
+        This is the app.
+    </div>
+    <div>
+        <button onclick="javascript:logOut()">Log out</button>
+    </div>
+</body>
+</html>
