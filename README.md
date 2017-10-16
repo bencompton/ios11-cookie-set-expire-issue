@@ -8,7 +8,7 @@ There appears to be an intermittent issue with setting and expiring cookies in i
 
 #### Steps to reproduce:
 
-1. Launch https://bencompton.github.io/ios11-webclip-auth-cookie-issue/index.html in Mobile Safari and add to home screen
+1. Launch https://bencompton.github.io/ios11-cookie-set-expire-issue/index.html in Mobile Safari and add to home screen
 
 2. Click the "log in" button
 
