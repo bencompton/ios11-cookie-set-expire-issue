@@ -5,7 +5,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Index</title>
     <script type="text/javascript">		
-		if (document.cookie.indexOf('logged-in') === -1) {
+		if (!navigator.standalone) {
+			document.write('Please add this to your home screen');
+		} else if (document.cookie.indexOf('logged-in') === -1) {
 			window.location.href = 'login.html';
 		}
 		
