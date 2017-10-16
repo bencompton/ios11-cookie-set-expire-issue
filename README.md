@@ -12,7 +12,7 @@ There appears to be an issue with iOS 11, home screen web apps (web clips), and 
 
 4. If you are still logged in, try clicking the "log out" button.
 
-7. Close the app and re-open it. You may find that you have been logged out, or you may still be logged in.
+5. Close the app and re-open it. You may find that you have been logged out, or you may still be logged in.
 
-If you don't notice any issues right away, repeat steps 4 - 7 until you either are kept logged in after logging out, or you are logged out when you should be logged in.
+If you don't notice any issues right away, repeat steps 3 - 5 until you either are kept logged in after logging out, or you are logged out when you should be logged in.
 
